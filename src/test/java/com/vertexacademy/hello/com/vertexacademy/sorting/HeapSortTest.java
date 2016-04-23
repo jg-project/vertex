@@ -16,6 +16,7 @@ public class HeapSortTest {
         int[] acutal = sorter.sort(new int[]{7, 6, 3, 3, 5, 2, 1});
 
         int[] expected = {1, 2, 3, 3, 5, 6, 7};
+
         assertArrayEquals(expected, acutal);
 
 
