@@ -11,9 +11,4 @@ public class SorteableTest {
     public void testMergeSort() throws Exception {
 
     }
-
-    @Test
-    public void testMerge() throws Exception {
-
-    }
 }

@@ -10,7 +10,7 @@ public class MergeSort implements Sorteable {
 
     {
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) Math.random() * 1000;
+            array[i] = (int) (Math.random() * 1000);
         }
     }
 
@@ -18,7 +18,7 @@ public class MergeSort implements Sorteable {
     public ArrayList<Integer> mergeSort(ArrayList<Integer> input) {
         ArrayList<Integer> left = new ArrayList<>();
         ArrayList<Integer> right = new ArrayList<>();
-        ArrayList<Integer> result = new ArrayList<>();
+        ArrayList<Integer> result;
         if (input.size() <= 1) {
             return input;
         } else {
