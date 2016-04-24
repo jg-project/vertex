@@ -4,9 +4,7 @@ import com.vertexacademy.spring.quotes.ListBasedQuotesProvider;
 import com.vertexacademy.spring.quotes.QuotesProvider;
 import com.vertexacademy.spring.runner.QuoteRunner;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 import java.util.Arrays;
@@ -16,8 +14,14 @@ import java.util.List;
  * Created by Sergii on 23.04.2016.
  */
 @Configuration
+@EnableAspectJAutoProxy
 @PropertySource("classpath:app.properties")
 public class JavaConfiguration {
+
+    @Bean
+    SimpleAspect simpleAspect() {
+        return new SimpleAspect();
+    }
 
     @Bean
     public static PropertySourcesPlaceholderConfigurer propertyConfigInDev() {
