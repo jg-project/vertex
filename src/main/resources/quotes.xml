@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+     http://www.springframework.org/schema/util
+     http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+
+    <util:list id="fewQuotes">
+        <value>Imagination is more important than knowledge.
+            Albert Einstein
+        </value>
+        <value>If music be the food of love, play on.
+            Shakespeare
+        </value>
+        <value>The way to get started is to quit talking and begin doing.
+            Walt Disney
+        </value>
+        <value>Obstacles are those frightful things you see when you take your eyes off the goal.
+            Henry Ford
+        </value>
+        <value>I skate where the puck is going to be, not where it has been.
+            Wayne Gretzky
+        </value>
+        <value>When you come to a fork in the road, take it.
+            Yogi Berra
+        </value>
+        <value>We may affirm absolutely that nothing great in the world has been accomplished without passion.
+            Hegel
+        </value>
+        <value>The life which is unexamined is not worth living.
+            Socrates
+        </value>
+        <value>Live as if you were to die tomorrow. Learn as if you were to live forever.
+            M.K. Gandhi
+        </value>
+        <value>What you get by achieving your goals is not as important as what you become by achieving your goals.
+            Zig Ziglar
+        </value>
+    </util:list>
+
+    <util:list id="emptyQuotes"/>
+
+
+</beans>
