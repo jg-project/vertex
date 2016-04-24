@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by vertex0008 on 23.04.2016.
  */
-public class HeapSort implements HeapSortInt{
+public class HeapSortImpl implements Sorter {
     public void main(String[] args) {
         final int[] a = { 3,4,5,23,2,23,567,9,1,4,0,128,64 };
         System.out.println(Arrays.toString(a));
@@ -57,5 +57,11 @@ public class HeapSort implements HeapSortInt{
                 return;
             }
         }
+    }
+
+    @Override
+    public int[] doIncrediblyFastSort(int[] arr) {
+        heapSort(arr, arr.length);
+        return  arr;
     }
 }
