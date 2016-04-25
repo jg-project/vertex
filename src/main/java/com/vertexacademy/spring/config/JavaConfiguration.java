@@ -3,6 +3,9 @@ package com.vertexacademy.spring.config;
 import com.vertexacademy.spring.quotes.ListBasedQuotesProvider;
 import com.vertexacademy.spring.quotes.QuotesProvider;
 import com.vertexacademy.spring.runner.QuoteRunner;
+import com.vertexacademy.spring.runner.RectangleRunner;
+import com.vertexacademy.spring.studySpring.Point;
+import com.vertexacademy.spring.studySpring.Rectangle;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
@@ -60,4 +63,26 @@ public class JavaConfiguration {
     QuoteRunner quoteRunner() {
         return new QuoteRunner();
     }
+
+    @Bean
+    Point point1 () {
+        return new Point(5,6);
+    }
+
+    @Bean
+    Point point2 () {
+        return new Point(7,8);
+    }
+
+    @Bean
+    RectangleRunner rectangleRunner(){
+        return new RectangleRunner();
+    }
+
+    @Bean
+    Rectangle rectangle(){
+        return new Rectangle(point1(),point2());
+    }
+
+
 }

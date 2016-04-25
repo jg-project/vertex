@@ -1,7 +1,5 @@
 package com.vertexacademy.exercises;
 
-import java.util.Arrays;
-
 /**
  * Created by Дмитрий on 24.04.2016.
  */

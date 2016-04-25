@@ -2,8 +2,6 @@ package com.vertexacademy.spring.runner;
 
 import com.vertexacademy.spring.quotes.QuotesProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-
 /**
  * Created by Sergii on 23.04.2016.
  */
