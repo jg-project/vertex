@@ -35,6 +35,7 @@ public class JavaConfiguration {
     @Value("${attemptsNumber:5}")
     int attemptsNumber;
 
+
     @Bean
     List<String> quotes() {
         return Arrays.asList(new String[]{
