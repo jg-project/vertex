@@ -1,22 +1,25 @@
 package com.vertexacademy.homework1.pisec;
 
 
+import java.util.List;
+
 /**
  * Created by Дмитрий on 26.04.2016.
  */
 public class Pisec {
 
     private Genius genius;
+    private List<Genius> geniusList;
 
-    public Pisec(Genius genius){
-            this.genius = genius;
+    public Pisec(List<Genius> geniusList){
+        this.geniusList = geniusList;
     }
 
     public Pisec(){
 
     }
 
-    public Genius getGenius() {
-        return genius;
+    public Genius getRandomGenius() {
+        return geniusList.get((int)(Math.random()*3));
     }
 }

@@ -22,15 +22,15 @@ public class JavaConfigPisec {
 
 
     @Bean
-    Pisec pisec(){
-        return new Pisec(geniuses().get((int)(Math.random()*3)));
-    }
-
-    @Bean
     List<Genius> geniuses(){
         return Arrays.asList(new Genius[]{
            poet(),proverbWriter(),songwriter()
         });
+    }
+
+    @Bean
+    Pisec pisec(){
+        return new Pisec(geniuses());
     }
 
     @Bean

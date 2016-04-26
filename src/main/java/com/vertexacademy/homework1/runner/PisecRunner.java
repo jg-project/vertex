@@ -14,6 +14,6 @@ public class PisecRunner implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(pisec.getGenius().write());
+        System.out.println(pisec.getRandomGenius().write());
     }
 }

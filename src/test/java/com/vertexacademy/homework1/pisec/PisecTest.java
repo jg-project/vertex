@@ -1,6 +1,5 @@
 package com.vertexacademy.homework1.pisec;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 
@@ -9,9 +8,9 @@ import org.junit.Test;
  */
 public class PisecTest {
 
-    @Test
+    @Test(expected = NullPointerException.class)
     public void typoiTestTipaTrueTrue(){
-        Assert.assertEquals(null,new Pisec(null).getGenius());
+        new Pisec(null).getRandomGenius();
     }
 
 }
