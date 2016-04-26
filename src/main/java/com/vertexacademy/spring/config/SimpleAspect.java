@@ -9,7 +9,7 @@ import org.aspectj.lang.annotation.Before;
 @Aspect
 public class SimpleAspect {
 
-    @Before("execution(** com.vertexacademy.spring.quotes.QuotesProvider.getRandomQuote(..))")
+    @Before("execution(**com.vertexacademy.spring.quotes.QuotesProvider.getRandomQuote(..))")
     public void doWeirdStuff() {
         System.out.println("Simon says:");
     }
