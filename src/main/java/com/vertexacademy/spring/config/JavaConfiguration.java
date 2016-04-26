@@ -4,6 +4,7 @@ import com.vertexacademy.spring.quotes.ListBasedQuotesProvider;
 import com.vertexacademy.spring.quotes.QuotesProvider;
 import com.vertexacademy.spring.runner.QuoteRunner;
 import com.vertexacademy.spring.runner.RectangleRunner;
+import com.vertexacademy.spring.studySpring.IRectangle;
 import com.vertexacademy.spring.studySpring.Point;
 import com.vertexacademy.spring.studySpring.Rectangle;
 import org.springframework.beans.factory.annotation.Value;
@@ -80,7 +81,7 @@ public class JavaConfiguration {
     }
 
     @Bean
-    Rectangle rectangle(){
+    IRectangle rectangle(){
         return new Rectangle(point1(),point2());
     }
 

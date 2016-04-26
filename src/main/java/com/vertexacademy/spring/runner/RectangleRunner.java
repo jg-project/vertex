@@ -1,5 +1,6 @@
 package com.vertexacademy.spring.runner;
 
+import com.vertexacademy.spring.studySpring.IRectangle;
 import com.vertexacademy.spring.studySpring.Rectangle;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -9,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class RectangleRunner implements Runnable {
 
     @Autowired
-    private Rectangle rect;
+    private IRectangle rect;
 
     @Override
     public void run() {
