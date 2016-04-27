@@ -25,6 +25,7 @@ public class Quadro implements Quadrable {
     }
 
     public static void main(String[] args) {
+
         Quadro q1 = new Quadro();
         q1.countDouble(5,-9,-2);
     }
