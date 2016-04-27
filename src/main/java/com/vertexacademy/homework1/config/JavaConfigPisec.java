@@ -21,16 +21,13 @@ public class JavaConfigPisec {
     }
 
 
-    @Bean
-    List<Genius> geniuses(){
-        return Arrays.asList(new Genius[]{
-           poet(),proverbWriter(),songwriter()
-        });
-    }
+   Genius genius(){
+       return new Pisec().getRandomGenius();
+   }
 
     @Bean
     Pisec pisec(){
-        return new Pisec(geniuses());
+        return new Pisec(genius());
     }
 
     @Bean

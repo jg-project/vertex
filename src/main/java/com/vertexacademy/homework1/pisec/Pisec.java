@@ -9,10 +9,9 @@ import java.util.List;
 public class Pisec {
 
     private Genius genius;
-    private List<Genius> geniusList;
 
-    public Pisec(List<Genius> geniusList){
-        this.geniusList = geniusList;
+    public Pisec(Genius genius){
+        this.genius = genius;
     }
 
     public Pisec(){
@@ -20,6 +19,7 @@ public class Pisec {
     }
 
     public Genius getRandomGenius() {
-        return geniusList.get((int)(Math.random()*3));
+        int random = (int)(Math.random()*3);
+        return (random == 0) ? new ProverbWriter() : (random == 1) ? new Poet() : new Songwriter();
     }
 }
