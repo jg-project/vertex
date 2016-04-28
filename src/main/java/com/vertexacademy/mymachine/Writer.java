@@ -18,7 +18,6 @@ public class Writer implements Genius {
     }
     @Override
     public void say()  {
-        chooseWriter();
         System.out.println(author+":"+phrase);
     }
 
