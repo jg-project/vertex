@@ -28,10 +28,11 @@ public class MyMachineTest {
     }
 
     @Test
-    public void Say() {
+    public void say() {
         talker.say();
-        assertEquals("To be or not to be. That is the question",
-                talker.getPhrase());
+        assertTrue(talker.getPhrase().equals("To be or not to be? That is the question")
+        ||talker.getPhrase().equals("Jak umru,to pohovaite...")||
+        talker.getPhrase().equals("Come on baby light my fire"));
     }
 
     }
