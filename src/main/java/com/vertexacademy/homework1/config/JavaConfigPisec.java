@@ -5,8 +5,6 @@ import com.vertexacademy.homework1.runner.PisecRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by Дмитрий on 26.04.2016.
@@ -20,7 +18,7 @@ public class JavaConfigPisec {
         return new PisecRunner();
     }
 
-
+    @Bean
    Genius genius(){
        return new Pisec().getRandomGenius();
    }
