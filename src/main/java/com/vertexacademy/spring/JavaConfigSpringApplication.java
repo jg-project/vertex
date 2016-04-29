@@ -1,21 +1,20 @@
 package com.vertexacademy.spring;
 
-import com.vertexacademy.spring.config.JavaConfiguration;
-import com.vertexacademy.spring.runner.QuoteRunner;
+import com.vertexacademy.spring.autoconfig.SomeClass;
+import com.vertexacademy.spring.config.SomeConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Created by Sergii on 23.04.2016.
  */
 public class JavaConfigSpringApplication {
     public static void main(String[] args) {
-        ApplicationContext ctx = new AnnotationConfigApplicationContext(JavaConfiguration.class);
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(SomeConfig.class);
 
-        QuoteRunner runner = ctx.getBean(QuoteRunner.class);
+        SomeClass someClass = ctx.getBean(SomeClass.class);
 
-        new Thread(runner).start();
+        someClass.doIt();
 
 
     }
