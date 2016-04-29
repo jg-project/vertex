@@ -1,8 +1,5 @@
 package com.vertexacademy.homework1.pisec;
 
-
-import java.util.List;
-
 /**
  * Created by Дмитрий on 26.04.2016.
  */

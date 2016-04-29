@@ -4,6 +4,7 @@ import com.vertexacademy.homework1.pisec.*;
 import com.vertexacademy.homework1.runner.PisecRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 
 /**
@@ -27,22 +28,6 @@ public class JavaConfigPisec {
     Pisec pisec(){
         return new Pisec(genius());
     }
-
-    @Bean
-    Poet poet(){
-        return new Poet();
-    }
-
-    @Bean
-    ProverbWriter proverbWriter(){
-        return new ProverbWriter();
-    }
-
-    @Bean
-    Songwriter songwriter(){
-        return new Songwriter();
-    }
-
 
 
 }
