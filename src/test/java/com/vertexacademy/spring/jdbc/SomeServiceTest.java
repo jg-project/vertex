@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.test.context.ContextConfiguration;
@@ -34,8 +35,8 @@ public class SomeServiceTest {
         }
 
         @Bean
-        SimpleRepository simpleRepository(DataSource dataSource) {
-            return new SimpleRepositoryImpl(dataSource);
+        SimpleRepository simpleRepository(JdbcTemplate template) {
+            return new JDBCTempl(template);
         }
 
         @Bean
@@ -46,7 +47,13 @@ public class SomeServiceTest {
                     .addScript("classpath:insert.sql")
                     .build();
         }
+
+        @Bean
+        JdbcTemplate jdbcTemplate(DataSource dataSource) {
+            return new JdbcTemplate(dataSource);
+        }
     }
+
 
     @Test
     public void get() throws Exception {

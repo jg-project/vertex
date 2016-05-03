@@ -15,7 +15,6 @@ public class SimpleEntity {
         this.name = name;
         this.ts = ts;
     }
-
     @Override
     public String toString() {
         return "SimpleEntity{" +
