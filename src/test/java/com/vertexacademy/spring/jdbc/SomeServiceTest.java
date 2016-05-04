@@ -35,7 +35,7 @@ public class SomeServiceTest {
 
         @Bean
         SimpleRepository simpleRepository(DataSource dataSource) {
-            return new SimpleRepositoryImpl(dataSource);
+            return new JdbcTemplateImpl(dataSource);
         }
 
         @Bean

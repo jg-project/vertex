@@ -4,7 +4,6 @@ import com.vertexacademy.homework1.pisec.*;
 import com.vertexacademy.homework1.runner.PisecRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
 
 /**
@@ -20,7 +19,7 @@ public class JavaConfigPisec {
     }
 
     @Bean
-   Genius genius(){
+    Genius genius(){
        return new Pisec().getRandomGenius();
    }
 
