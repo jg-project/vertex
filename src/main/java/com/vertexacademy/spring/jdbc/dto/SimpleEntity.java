@@ -6,9 +6,9 @@ import java.util.Objects;
  * Created by user_2 on 29.04.2016.
  */
 public class SimpleEntity {
-    public final int id;
-    public final String name;
-    public final long ts;
+    private final int id;
+    private final String name;
+    private final long ts;
 
     public SimpleEntity(int id, String name, long ts) {
         this.id = id;
@@ -38,5 +38,17 @@ public class SimpleEntity {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, ts);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public long getTs() {
+        return ts;
     }
 }
