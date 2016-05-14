@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+
+    <include file="./initial/tables/users.sql" relativeToChangelogFile="true"/>
+    <include file="./initial/data/users.sql" relativeToChangelogFile="true"/>
+
+    <!--<changeSet id="init" author="me">-->
+        <!--<sqlFile path="./initial/tables/users.sql"/>-->
+        <!--<sqlFile path="./initial/data/users.sql"/>-->
+        <!--<rollback>-->
+            <!--<dropTable tableName="users"/>-->
+        <!--</rollback>-->
+    <!--</changeSet>-->
+
+    <changeSet id="add new accounts" author="my.corp.name@corp.com">
+        <createTable tableName="accounts">
+            <column name="id" type="number" autoIncrement="true"/>
+            <column name="amount" type="varchar2(100)"/>
+        </createTable>
+        <insert tableName="accounts">
+            <column name="id" value="1"/>
+            <column name="amount" value="100500"/>
+        </insert>
+
+        <rollback>
+            <dropTable tableName="accounts"/>
+        </rollback>
+    </changeSet>
+
+    <!--<include file="./migrations/JIRA-150000/mychange.xml" relativeToChangelogFile="true"/>-->
+    <!--<include file="./migrations/JIRA-1/mychange.xml" relativeToChangelogFile="true"/>-->
+
+
+</databaseChangeLog>
