@@ -1,0 +1,1 @@
+create table users (id number, fname varchar2(100), lname varchar2(100));
